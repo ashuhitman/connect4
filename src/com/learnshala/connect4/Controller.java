@@ -69,6 +69,7 @@ public class Controller implements Initializable {
             rootGridPane.add(rectangle, 0, 1);
         }
 
+
     }
 
     private Shape createGameStructuralGrid() {
@@ -248,20 +249,25 @@ public class Controller implements Initializable {
             }
         }
         isPlayerOneTurn = true;
-        playerNameLabel.setText(PLAYER_ONE);
+
         playerOneName.setText("");
         playerTwoName.setText("");
+        PLAYER_ONE = "Player One";
+        PLAYER_TWO = "Player Two";
+        playerNameLabel.setText(PLAYER_ONE);
 
         createPlayGround();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //set players name
         setNameBtn.setOnAction(event -> setPlayerNames());
 
     }
 
     private void setPlayerNames() {
+
         PLAYER_ONE = playerOneName.getText();
         PLAYER_TWO = playerTwoName.getText();
         playerNameLabel.setText(PLAYER_ONE);

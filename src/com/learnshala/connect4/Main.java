@@ -32,6 +32,7 @@ public class Main extends Application {
        Scene scene = new Scene(root);
        primaryStage.setScene(scene);
        primaryStage.setTitle("Connect Four");
+       primaryStage.setResizable(false);
        primaryStage.show();
     }
 
